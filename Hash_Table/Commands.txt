@@ -1,0 +1,40 @@
+//Steffen Chirichiello cs435 9364 mp
+
+COMPILATION INSTRUCTIONS:
+  this program uses c++ 11 compiler
+  
+  it compiles using:  g++ -std=c++11 mp_9364.cpp -o mp9364
+  it then executes by: ./mp_9364 command.txt
+  
+EXECUTION INSTRUCTIONS:
+    for file: 'arbitrary file name'.txt
+    
+    this program takes one command line argument: an arbitrary file name
+    inside the file:
+      commands must be typed at the start of each line with exactly one space between the next command.
+      No tabs, just a single space between them.
+      Nothing is typed before or after them. 
+      ex:
+          14 10
+          10 alex
+          10 john
+          13
+    
+    
+BUG REPORT
+  This program cannot function if the first command in the txt file IS NOT a 14(the create operation)
+  for example this works:
+                            14 20
+                            10 alex
+                            10 john
+                            13
+                            
+  this will not work:
+                        10 alex
+                        14 20
+                        10 john        
+                        13
+                        
+  A 14 has to be present and has to be on the first line of the txt file
+  The command 14 CANNOT be present in more than one line. It only occurs
+  once, at the start of the txt file.
